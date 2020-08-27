@@ -1,6 +1,7 @@
 FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
 RUN apt-get -y update \
+    && apt-get install -y curl \
     && export DEBIAN_FRONTEND="noninteractive" \
     && apt-get -y install tzdata \
     && apt-get install -y apache2 \
