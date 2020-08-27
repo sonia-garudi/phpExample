@@ -1,4 +1,4 @@
-FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
+FROM quay.io/snehakpersistent/multi-arch-travis:x86_64
 
 RUN apt-get -y update \
     && apt-get install -y curl \
