@@ -24,4 +24,4 @@ USER 1001
 
 RUN curl http://localhost:8080
 
-CMD apachectl -D FOREGROUND && php -f /var/www/html/index.php
+CMD apachectl -D FOREGROUND
