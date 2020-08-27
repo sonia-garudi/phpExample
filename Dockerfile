@@ -8,7 +8,6 @@ RUN apt-get -y update \
     && apt-get install -y php  php-common php-fpm libapache2-mod-php
 
 ADD index.php /var/www/html/
-ADD index.html /var/www/html/
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
     && sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf \
