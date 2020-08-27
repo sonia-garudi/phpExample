@@ -3,7 +3,7 @@ FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 RUN apt-get -y update \
     && export DEBIAN_FRONTEND="noninteractive" \
     && apt-get -y install tzdata \
-    && apt-get install -y apache2
+    && apt-get install -y apache2 \
     && apt-get install -y php libapache2-mod-php
 
 ADD index.php /var/www/html/
