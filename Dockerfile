@@ -24,6 +24,4 @@ USER 1001
 
 RUN curl http://localhost:8080
 
-CMD php-fpm & apachectl -D FOREGROUND
-
-CMD sleep 2000s
+CMD apachectl -D FOREGROUND && sleep 2000s
