@@ -1,4 +1,4 @@
-FROM quay.io/snehakpersistent/multi-arch-travis:x86_64
+FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
 RUN apt-get -y update \
     && apt-get install -y curl \
@@ -19,8 +19,6 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 EXPOSE 8080
 
 RUN service apache2 start
-
-USER 1001
 
 RUN curl http://localhost:8080
 
