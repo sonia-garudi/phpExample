@@ -25,4 +25,4 @@ USER 1001
 
 RUN curl http://localhost:8080
 
-CMD php-fpm & /usr/sbin/apachectl -D FOREGROUND
+CMD /usr/sbin/apachectl -D FOREGROUND
