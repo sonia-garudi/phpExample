@@ -31,6 +31,8 @@ RUN service apache2 restart
 
 RUN curl http://localhost:8080/index.php
 
-CMD /usr/sbin/apache2ctl -DFOREGROUND
+#CMD /usr/sbin/apache2ctl -DFOREGROUND
+
+CMD sleep 2000s
 
 USER 1001
