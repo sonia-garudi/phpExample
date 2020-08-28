@@ -24,6 +24,6 @@ RUN service apache2 start
 
 RUN curl http://localhost:9090
 
-CMD /usr/sbin/apachectl -D FOREGROUND && sleep 2000s
+CMD /usr/sbin/apachectl -D FOREGROUND
 
 USER 1001
