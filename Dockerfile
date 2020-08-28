@@ -25,8 +25,6 @@ RUN mkdir /run/php-fpm \
     && php -v \
     && service apache2 start
 
-RUN curl http://localhost:8080/index.php
-
 EXPOSE 8080
 
 CMD /usr/sbin/apache2ctl -DFOREGROUND
