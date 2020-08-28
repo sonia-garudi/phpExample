@@ -27,9 +27,9 @@ RUN mkdir /run/php-fpm \
 
 RUN php -v
 
-RUN service apache2 restart
+#RUN service apache2 restart
 
-RUN curl http://localhost:8080/index.php
+#RUN curl http://localhost:8080/index.php
 
 #CMD /usr/sbin/apache2ctl -DFOREGROUND
 
