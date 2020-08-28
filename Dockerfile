@@ -20,10 +20,10 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 
 EXPOSE 9090
 
-#RUN service apache2 start
+RUN service apache2 start
 
 #RUN curl http://localhost:9090
 
-CMD /usr/sbin/apachectl start && curl http://localhost:9090
+CMD curl http://localhost:9090
 
 USER 1001
