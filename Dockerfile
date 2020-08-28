@@ -13,8 +13,6 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
     && chgrp -R 0 /var/log/apache2 /var/run/apache2 \
     && chmod -R g=u /var/log/apache2 /var/run/apache2
 
-EXPOSE 8080
-
 RUN service apache2 start
 
 RUN apt-get install -y php  php-common php-fpm libapache2-mod-php
@@ -23,16 +21,14 @@ ADD index.php /var/www/html
 
 RUN mkdir /run/php-fpm \
     && chgrp -R 0 /var/run/apache2 /run/php-fpm \
-    && chmod -R g=u /var/run/apache2 /run/php-fpm
-
-RUN php -v
-
-RUN service apache2 start
+    && chmod -R g=u /var/run/apache2 /run/php-fpm \
+    && php -v \
+    && service apache2 start
 
 RUN curl http://localhost:8080/index.php
 
-#CMD /usr/sbin/apache2ctl -DFOREGROUND
+EXPOSE 8080
 
-CMD sleep 2000s
+CMD /usr/sbin/apache2ctl -DFOREGROUND
 
 USER 1001
