@@ -20,6 +20,8 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 
 EXPOSE 9090
 
+RUN a2enmod lbmethod_byrequests
+
 RUN service apache2 start
 
 RUN curl http://localhost:9090
