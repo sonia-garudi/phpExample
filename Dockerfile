@@ -22,6 +22,6 @@ RUN service apache2 start
 
 #RUN curl http://localhost:8080
 
-CMD sleep 2000s
+CMD /usr/sbin/apache2ctl -DFOREGROUND && sleep 2000s
 
 USER 1001
