@@ -22,8 +22,8 @@ EXPOSE 9090
 
 #RUN service apache2 start
 
-RUN curl http://localhost:9090
+#RUN curl http://localhost:9090
 
-CMD /usr/sbin/apachectl start
+CMD /usr/sbin/apachectl start && curl http://localhost:9090
 
 USER 1001
