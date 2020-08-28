@@ -18,15 +18,15 @@ RUN service apache2 start
 
 RUN curl http://localhost:8080
 
-RUN apt-get install -y php  php-common php-fpm libapache2-mod-php
+#RUN apt-get install -y php  php-common php-fpm libapache2-mod-php
 
-RUN mkdir /run/php-fpm \
-    && chgrp -R 0 /var/run/apache2 /run/php-fpm \
-    && chmod -R g=u /var/run/apache2 /run/php-fpm
+#RUN mkdir /run/php-fpm \
+#    && chgrp -R 0 /var/run/apache2 /run/php-fpm \
+#    && chmod -R g=u /var/run/apache2 /run/php-fpm
 
-RUN php -v
+#RUN php -v
 
-RUN service apache2 restart
+#RUN service apache2 restart
 
 EXPOSE 8080
 
