@@ -26,6 +26,6 @@ RUN service apache2 start
 
 RUN curl http://localhost:9090
 
-CMD /usr/sbin/apachectl -D FOREGROUND
+CMD /usr/sbin/apachectl status
 
 USER 1001
