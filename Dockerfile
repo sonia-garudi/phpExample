@@ -18,7 +18,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
  #   && chgrp -R 0 /var/log/apache2 /var/run/apache2 /run/php-fpm \
   #  && chmod -R g=u /var/log/apache2 /var/run/apache2 /run/php-fpm
 
-EXPOSE 8080
+EXPOSE 9090
 
 RUN service apache2 start
 
